@@ -46,10 +46,15 @@ public class ManageProduct{
         }
     }
     public void searchName(String name){
+        boolean has = false;
         for (Product product:list){
             if(product.getName().equals(name)){
                 System.out.println(product);
+                has = true;
             }
+        }
+        if(!has){
+            System.out.println("Invalid");
         }
     }
     public void sort(int option){
